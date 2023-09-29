@@ -1,9 +1,10 @@
 name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} is testing out GitHub Actions with npm and node.js
 on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
       - run: npm install
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: npm run build
+      - run: echo "Hello, world!"
